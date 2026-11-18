@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>熱血阿傑的自然生態日記簿</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>body{margin:0}.pod-cover{width:180px;height:180px;object-fit:cover;border-radius:10px;box-shadow:0 8px 18px var(--shadow)}
+.ev-body p{margin:0}
+.ev-cta{margin-top:auto;padding-top:6px}
+.ev-cta .btn{padding:10px 26px}
+.mg.quiz{display:flex;flex-direction:column;gap:10px}
+.more-grid{align-items:start}
+.quiz-img{display:block;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.quiz-img img{width:100%;aspect-ratio:1200/630;object-fit:cover}
+.hero-art .note{font-size:17px}
+@media (max-width:560px){.pod-cover{width:100%;height:auto;aspect-ratio:1}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap">
+<style>
+/* Layout: a naturalist's field journal — paper pages, specimen labels, pressed-leaf margins; photos move like a slow walk along a trail */
+:root{
+  --paper:#EEF0E4; --paper-2:#E3E8D6; --card:#F8F9F1; --ink:#1D2A21; --ink-soft:#4E5D51;
+  --moss:#2E5B44; --fern:#6F9A58; --amber:#B9781F; --amber-soft:#F3DFB0; --bark:#6A4C34;
+  --line:#C9CFBC; --shadow:rgba(30,45,33,.14); --on-moss:#F3F6EC;
+  --f-display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-hand:"LXGW WenKai TC","Kaiti TC","DFKai-SB",cursive;
+  --gut:max(16px,env(safe-area-inset-left,0px));
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0F1813; --paper-2:#15221A; --card:#18271E; --ink:#E3EADB; --ink-soft:#A9B7A8;
+  --moss:#8CC59E; --fern:#9EC58A; --amber:#E7AE52; --amber-soft:#3B2E14; --bark:#C9A27E;
+  --line:#2B3B30; --shadow:rgba(0,0,0,.45); --on-moss:#0F1813; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F1813; --paper-2:#15221A; --card:#18271E; --ink:#E3EADB; --ink-soft:#A9B7A8;
+  --moss:#8CC59E; --fern:#9EC58A; --amber:#E7AE52; --amber-soft:#3B2E14; --bark:#C9A27E;
+  --line:#2B3B30; --shadow:rgba(0,0,0,.45); --on-moss:#0F1813; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.85;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+a{color:var(--moss)}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.3}
+p,li{text-wrap:pretty}
+.wrap{max-width:1120px;margin:0 auto;padding-left:var(--gut);padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hand{font-family:var(--f-hand)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:18px;padding-block:10px}
+.nav .brand{font-family:var(--f-display);font-weight:700;font-size:15px;white-space:nowrap;color:var(--ink);text-decoration:none}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.nav ul::-webkit-scrollbar{display:none}
+.nav li a{display:block;padding:4px 10px;border-radius:99px;font-size:14px;color:var(--ink-soft);text-decoration:none;white-space:nowrap}
+.nav li a:hover{background:var(--paper-2);color:var(--ink)}
+.nav .buy{background:var(--moss);color:var(--on-moss);padding:6px 14px;border-radius:99px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+
+/* hero */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:48px 56px}
+.hero-copy{min-width:0}
+.ribbon{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#fff;font-weight:700;font-size:14px;padding:5px 14px 5px 10px;border-radius:4px;transform:rotate(-1.5deg)}
+.ribbon svg{width:18px;height:18px}
+.hero h1{font-size:clamp(34px,5.4vw,58px);font-weight:900;margin-top:18px;letter-spacing:.02em}
+.hero .sub{font-family:var(--f-hand);font-size:clamp(19px,2.2vw,23px);color:var(--moss);margin:10px 0 0}
+.hero-lead{margin:22px 0 0;font-size:17.5px}
+.hero-lead strong{background:linear-gradient(transparent 60%,var(--amber-soft) 60%);font-weight:700}
+.hero-pts{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
+.hero-pts li{display:flex;gap:12px;align-items:flex-start}
+.hero-pts .ic{flex:none;width:30px;height:30px;border-radius:50%;background:var(--paper-2);display:grid;place-items:center;color:var(--moss)}
+.hero-pts .ic svg{width:17px;height:17px}
+.hero-meta{margin-top:20px;font-size:14px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:99px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid var(--moss);cursor:pointer}
+.btn.solid{background:var(--moss);color:var(--on-moss)}
+.btn.ghost{color:var(--moss);background:transparent}
+.hero-art{position:relative;min-width:0}
+.hero-art img{width:100%;max-width:560px;margin:0 auto;filter:drop-shadow(0 18px 30px var(--shadow))}
+.hero-art .note{position:static;display:table;margin:14px auto 0;transform:rotate(-1.5deg)!important;background:var(--card);border:1px solid var(--line);padding:10px 14px;border-radius:6px;font-family:var(--f-hand);font-size:16px;line-height:1.5;transform:rotate(-3deg);box-shadow:0 6px 14px var(--shadow);max-width:230px}
+.hero-art .note b{color:var(--amber)}
+
+/* photo trail (marquee) */
+.trail{padding-block:18px 8px;overflow:hidden;border-block:1px solid var(--line);background:var(--paper-2)}
+.trail-row{display:flex;gap:14px;width:max-content;animation:drift 90s linear infinite}
+.trail-row.rev{animation-direction:reverse;animation-duration:110s;margin-top:14px}
+.trail:hover .trail-row{animation-play-state:paused}
+@keyframes drift{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.trail-row{animation:none}.trail{overflow-x:auto}}
+.ph{margin:0;position:relative;flex:none;height:210px;border-radius:6px;overflow:hidden;background:var(--card)}
+.ph img{height:100%;width:auto;object-fit:cover}
+.ph figcaption{position:absolute;left:8px;bottom:8px;background:var(--card);color:var(--ink);font-size:12.5px;line-height:1.35;padding:4px 8px;border-radius:3px;border-left:3px solid var(--amber);max-width:calc(100% - 16px)}
+.ph figcaption small{display:block;color:var(--ink-soft);font-size:11px}
+.trail-note{text-align:center;font-family:var(--f-hand);color:var(--ink-soft);font-size:15px;margin:12px 0 4px}
+
+/* sections */
+section.blk{padding-block:72px}
+.blk.alt{background:var(--paper-2)}
+.kicker{font-family:var(--f-hand);color:var(--amber);font-size:18px;margin:0 0 6px;display:flex;align-items:center;gap:8px}
+.kicker::before{content:"";width:22px;height:2px;background:currentColor}
+.blk h2{font-size:clamp(26px,3.4vw,38px);font-weight:900;margin-bottom:22px}
+.lead{max-width:62ch;font-size:17px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.two>*{min-width:0}
+
+/* intro */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:28px 0 0}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 12px;text-align:center}
+.fact b{display:block;font-family:var(--f-display);font-size:30px;color:var(--moss);line-height:1.1;font-variant-numeric:tabular-nums}
+.fact span{font-size:13.5px;color:var(--ink-soft)}
+.feat{display:grid;gap:14px;margin-top:8px}
+.feat div{border-left:3px solid var(--fern);padding:2px 0 2px 14px}
+.feat h3{font-size:18px;margin-bottom:2px}
+.feat p{margin:0;color:var(--ink-soft);font-size:15.5px}
+.spec{margin-top:26px;font-size:14.5px;border-top:1px dashed var(--line);padding-top:14px;color:var(--ink-soft);display:grid;grid-template-columns:auto 1fr;gap:4px 16px;font-variant-numeric:tabular-nums}
+.spec dt{color:var(--ink);font-weight:500}
+.spec dd{margin:0}
+.book-img{border-radius:4px;box-shadow:0 14px 30px var(--shadow);width:100%;max-width:min(100%,380px);margin:0 auto}
+
+/* gift */
+.gift-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.gift-head>*{min-width:0}
+.gift-tag{display:inline-block;font-weight:700;color:var(--amber);border:2px solid var(--amber);padding:2px 12px;border-radius:4px;font-size:14px}
+.gift-spec{font-family:var(--f-hand);font-size:19px;color:var(--moss);margin:10px 0 18px}
+.gift-q{font-family:var(--f-display);font-size:24px;font-weight:700;margin:0 0 12px}
+.gift-cover{width:100%;max-width:min(100%,300px);margin:0 auto;box-shadow:0 16px 30px var(--shadow);transform:rotate(2deg);border-radius:2px}
+.pages{margin-top:44px;display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 18px;scrollbar-color:var(--fern) transparent}
+.pages figure{margin:0;flex:none;width:min-content;scroll-snap-align:start;display:flex;flex-direction:column;gap:8px}
+.pages img{height:360px;width:auto;max-width:none;align-self:flex-start;border-radius:3px;box-shadow:0 8px 20px var(--shadow);background:#fff}
+.pages .spread img{box-shadow:none;background:transparent;height:380px}
+.pages figcaption{font-size:14px;color:var(--ink-soft);max-width:420px}
+.pages figcaption b{color:var(--ink)}
+.pager{display:flex;gap:8px;justify-content:flex-end;margin-top:-6px}
+.pager button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--moss);background:var(--card);color:var(--moss);cursor:pointer;font-size:18px}
+.howto{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.howto div{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px 18px 16px;position:relative}
+.howto div::before{counter-increment:s;content:counter(s);position:absolute;top:-12px;left:14px;width:28px;height:28px;border-radius:50%;background:var(--moss);color:var(--on-moss);font-weight:700;display:grid;place-items:center;font-size:14px}
+.howto h3{font-size:17px;margin:6px 0 4px}
+.howto p{margin:0;font-size:15px;color:var(--ink-soft)}
+.promise{margin-top:28px;background:var(--moss);color:var(--on-moss);border-radius:8px;padding:22px 26px}
+.promise h3{font-size:19px;margin-bottom:8px}
+.promise ol{margin:0;padding-left:1.4em;display:grid;gap:2px;font-size:15.5px}
+
+/* author */
+.author{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start}
+.author>*{min-width:0}
+.polaroid{background:#fff;padding:10px 10px 44px;box-shadow:0 12px 26px var(--shadow);transform:rotate(-2deg);position:relative}
+.polaroid img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.polaroid span{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-family:var(--f-hand);color:#3b4a3f;font-size:16px}
+.creds{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0;list-style:none}
+.creds li{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:3px 12px;font-size:14px}
+.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.social a{font-size:14px;padding:6px 12px;border:1px solid var(--line);border-radius:6px;text-decoration:none;background:var(--card)}
+
+/* buy */
+.shops{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:8px}
+.shop{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:16px 18px;border-radius:8px;background:var(--card);border:1.5px solid var(--line);text-decoration:none;color:var(--ink);font-weight:700}
+.shop:hover{border-color:var(--moss)}
+.shop small{font-weight:400;color:var(--ink-soft);font-size:12.5px}
+.shop.pending{opacity:.7;cursor:default}
+.buy-note{font-size:14px;color:var(--ink-soft);margin-top:14px}
+
+/* recommend */
+.recs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rec{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.rec .who{display:flex;gap:12px;align-items:center}
+.rec .face{width:58px;height:58px;border-radius:50%;background:var(--paper-2);border:2px dashed var(--fern);display:grid;place-items:center;color:var(--ink-soft);font-size:12px;flex:none}
+.rec .who b{display:block;font-family:var(--f-display)}
+.rec .who span{font-size:13.5px;color:var(--ink-soft)}
+.rec p{margin:0;font-family:var(--f-hand);font-size:17px;line-height:1.7;color:var(--ink-soft)}
+
+/* events */
+.events{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ev{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.ev-img{height:200px;position:relative}
+.ev-img img{width:100%;height:100%;object-fit:cover}
+.ev-date{position:absolute;top:14px;left:14px;background:var(--card);border-radius:6px;padding:6px 12px;text-align:center;line-height:1.15;box-shadow:0 4px 10px var(--shadow)}
+.ev-date b{display:block;font-family:var(--f-display);font-size:26px;color:var(--moss);font-variant-numeric:tabular-nums}
+.ev-date span{font-size:12.5px;color:var(--ink-soft)}
+.ev-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.ev-type{font-size:13px;font-weight:700;color:var(--amber);letter-spacing:.06em}
+.ev h3{font-size:21px}
+.ev dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:0;font-size:15px;font-variant-numeric:tabular-nums}
+.ev dt{color:var(--ink-soft)}
+.ev dd{margin:0}
+.ev-open{margin-top:22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;background:var(--amber-soft);border-radius:8px;padding:14px 18px}
+.ev-open b{font-family:var(--f-display);font-size:18px}
+
+/* excerpts */
+.exs{display:grid;gap:30px}
+.ex{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:center}
+.ex:nth-child(even) .ex-img{order:2}
+.ex>*{min-width:0}
+.ex-img{position:relative}
+.ex-img img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
+.label{position:absolute;right:-6px;bottom:-14px;background:var(--card);border:1px solid var(--line);padding:6px 12px;font-size:12.5px;line-height:1.45;box-shadow:0 4px 10px var(--shadow);font-variant-numeric:tabular-nums}
+.label b{font-family:var(--f-display);font-size:13.5px;display:block}
+.ex .place{font-size:14px;color:var(--amber);font-weight:700;letter-spacing:.04em}
+.ex h3{font-size:24px;margin:4px 0 10px}
+.ex p{margin:0}
+.ex .pg{margin-top:10px;font-size:13.5px;color:var(--ink-soft)}
+
+.cut{background:#fff;border-radius:6px}.cut img{object-fit:contain!important;object-position:center bottom}
+.ph.cut img{object-fit:cover}
+/* toc */
+.toc-tw{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.toc-col{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 16px 12px;min-width:0}
+.toc-col h3{font-size:17px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--fern);padding-bottom:6px;margin-bottom:6px}
+.toc-col h3 small{font-family:var(--f-body);font-size:12.5px;color:var(--ink-soft);font-weight:400}
+.toc-col ol{list-style:none;margin:0;padding:0;font-size:14.5px}
+.toc-col li{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-bottom:1px dotted var(--line)}
+.toc-col li span:last-child{color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.toc-abroad{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.toc-front{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:18px;font-size:15px}
+.toc-front span b{font-variant-numeric:tabular-nums;color:var(--ink-soft);font-weight:400;margin-left:6px}
+
+/* preface */
+.pf-hero{background:var(--moss);color:var(--on-moss);border-radius:10px;padding:34px 34px 30px;position:relative;overflow:hidden}
+.pf-hero .kicker{color:var(--amber-soft)}
+.pf-hero h2{color:var(--on-moss);margin-bottom:10px}
+.pf-hero p{margin:0;font-family:var(--f-hand);font-size:20px}
+.pf-hero .by{margin-top:14px;font-size:15px;font-family:var(--f-body);opacity:.85}
+.pf-map{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 10px}
+.pf-map a{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 14px 6px 6px;font-size:14.5px}
+.pf-map a span{width:26px;height:26px;border-radius:50%;background:var(--amber);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-size:13px}
+.pf-body{max-width:760px;margin:0 auto}
+.pf-part{margin-top:46px}
+.pf-partlabel{display:flex;align-items:center;gap:12px;font-family:var(--f-display);font-weight:900;font-size:clamp(22px,2.8vw,28px);color:var(--moss);margin:0 0 6px;padding-bottom:10px;border-bottom:2px solid var(--line)}
+.pf-partlabel span{width:42px;height:42px;border-radius:50%;background:var(--moss);color:var(--on-moss);display:grid;place-items:center;font-size:20px;flex:none}
+.pf-h{font-size:20px;margin:30px 0 8px;color:var(--ink);display:flex;gap:10px;align-items:baseline}
+.pf-h::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--amber);transform:rotate(45deg);flex:none;position:relative;top:-2px}
+.pf-body p{margin:0 0 14px}
+.pf-tip{background:var(--amber-soft);border-radius:6px;padding:10px 16px;font-weight:700;font-family:var(--f-hand);font-size:18px}
+.pf-pull{margin:22px 0;padding:6px 0 6px 22px;border-left:4px solid var(--fern);font-family:var(--f-display);font-size:22px;font-weight:700;line-height:1.6;color:var(--moss)}
+.pf-four{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0 18px}
+.pf-card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;min-width:0}
+.pf-cardk{width:40px;height:40px;border-radius:8px;background:var(--moss);color:var(--on-moss);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:20px;margin:0 0 8px!important}
+.pf-card h4{font-size:16.5px;margin-bottom:8px}
+.pf-card p,.pf-li{font-size:15px;margin:0 0 8px!important}
+.pf-li b{color:var(--moss)}
+.pf-gear{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 18px}
+.pf-gi{background:var(--card);border:1px dashed var(--fern);border-radius:8px;padding:14px 16px;min-width:0}
+.pf-gi h5{margin:0 0 4px;font-size:16px;font-family:var(--f-hand);color:var(--moss)}
+.pf-gi p{margin:0!important;font-size:14.5px;color:var(--ink-soft)}
+.pf-sign{text-align:right;font-family:var(--f-hand);font-size:20px;color:var(--moss);margin-top:24px}
+
+/* more */
+.pod{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px}
+.pod>*{min-width:0}
+.pod-art{width:150px;height:150px;border-radius:10px;background:var(--moss);color:var(--on-moss);display:grid;place-items:center;text-align:center;font-family:var(--f-display);font-weight:900;font-size:19px;line-height:1.3;padding:12px}
+.pod-art svg{width:40px;height:40px;margin:0 auto 6px;display:block}
+.pod h3{font-size:22px;margin-bottom:6px}
+.pod p{margin:0 0 12px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills a{font-size:14px;padding:6px 14px;border-radius:99px;background:var(--moss);color:var(--on-moss);text-decoration:none;font-weight:500}
+.pills a.o{background:transparent;color:var(--moss);border:1.5px solid var(--moss)}
+.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.mg{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px}
+.mg h3{font-size:18px;margin-bottom:6px}
+.mg p{margin:0 0 10px;font-size:15px;color:var(--ink-soft)}
+
+footer{padding-block:36px 50px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-soft)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (max-width:900px){
+  .hero .wrap,.two,.gift-head,.author,.ex,.events{grid-template-columns:1fr}
+  .ex:nth-child(even) .ex-img{order:0}
+  .recs,.howto{grid-template-columns:1fr}
+  .toc-tw{grid-template-columns:1fr 1fr}
+  .toc-abroad{grid-template-columns:1fr 1fr}
+  .hero-art .note{position:static;transform:none;margin-top:12px;max-width:none}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .toc-tw,.toc-abroad,.pf-four,.pf-gear,.more-grid{grid-template-columns:1fr}
+  .pod{grid-template-columns:1fr}
+  .pod-art{width:100%;height:auto;padding:18px}
+  .ph{height:160px}
+  .pages img{height:280px}.pages .spread img{height:240px}
+  .pf-hero{padding:26px 20px}
+  section.blk{padding-block:56px}
+  .nav .brand{display:none}
+}
+</style>
+
+</head>
+<body>
+<nav class="nav" aria-label="頁面導覽"><div class="wrap">
+  <a class="brand" href="#top">熱血阿傑的自然生態日記簿</a>
+  <ul>
+    <li><a href="#intro">新書簡介</a></li>
+    <li><a href="#gift">首刷別冊</a></li>
+    <li><a href="#author">作者</a></li>
+    <li><a href="#recommend">開箱推薦</a></li>
+    <li><a href="#events">實體活動</a></li>
+    <li><a href="#excerpt">書摘</a></li>
+    <li><a href="#contents">目錄</a></li>
+    <li><a href="#preface">作者序</a></li>
+    <li><a href="#more">延伸閱讀</a></li>
+  </ul>
+  <a class="buy" href="#buy">購買</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="hero-copy">
+    <span class="ribbon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7H7.5a2.5 2.5 0 1 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 1 0 0-5C13 2 12 7 12 7z"/></svg>首刷限量加贈別冊《2027 我的自然觀察誌》</span>
+    <h1>熱血阿傑的<br>自然生態日記簿</h1>
+    <p class="sub">大手牽小手，走進生命真正發生的地方</p>
+    <p class="hero-lead">一本書帶你走 43 個臺灣親子走讀點，再飛去 6 個國家的雨林。首刷隨書加贈一本<strong>可以帶出門的自然觀察誌</strong>，讓孩子一整年都有地方記錄自己的生態探險。</p>
+    <ul class="hero-pts">
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span><span><b>孩子的探險紀錄本</b>：每個月一位主角物種、建議去處和書中頁碼，旁邊留好集章區和紀錄欄。</span></li>
+      <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h3l2-3h6l2 3h3v13H4z"/><circle cx="12" cy="13" r="4"/></svg></span><span><b>大人也想留一本</b>：阿傑親攝的生態照片，搭配 2027 年曆，國定假日都標好了。</span></li>
+    </ul>
+    <div class="cta"><a class="btn solid" href="#buy">立即購買</a><a class="btn ghost" href="#gift">翻翻別冊內頁</a></div>
+  </div>
+  <div class="hero-art">
+    <img src="img/product.png" alt="《熱血阿傑的自然生態日記簿》書封與首刷加贈別冊《2027 我的自然觀察誌》">
+    <p class="note"><b>首刷附贈，送完即止！</b></p>
+  </div>
+</div></header>
+
+<div class="trail" aria-label="書中生態照片">
+  <div class="trail-row" id="row1"></div>
+  <div class="trail-row rev" id="row2"></div>
+  <p class="trail-note">以上照片都出自書中，攝影：黃仕傑。滑鼠移上去可以暫停。</p>
+</div>
+
+<section class="blk" id="intro"><div class="wrap two">
+  <div>
+    <p class="kicker">新書簡介</p>
+    <h2>從家門口的森林，到世界盡頭的雨林</h2>
+    <div class="lead">
+      <p>在 AI 什麼都能回答的年代，答案來得太快，人與人之間的溫度卻越來越淡。孩子需要的，是一段放下螢幕、親手觸摸真實世界的時間。走進森林，要先學會安靜下來、耐心等待；發現一隻偽裝的守宮時忍不住驚呼，也學著把最好的位置讓給身邊的人；牽著大人的手走過夜晚的步道，害怕和好奇都有人一起接住。在自然裡，孩子認識自己的感受，練習同理另一個生命，也學會「只看不帶走」的選擇與責任。</p>
+      <p>這本書集結熱血阿傑走遍臺灣與世界的生態現場：從家門口的森林與步道、日本的鍬形蟲、泰國清邁的雨林、婆羅洲的少女營地與神山，到馬達加斯加、秘魯與澳洲。每一站都有現場故事、細膩的觀察和全彩攝影，讓大人和孩子一起出發，重新找回人與人、人與自然之間真實的連結。</p>
+      <p>提琴步行蟲、五角大兜蟲、大王花、枯葉角蟾、長頸捲葉象鼻蟲……翻開書頁，就像跟著阿傑一起探險。看完以後，下次全家出門散步，孩子會忍不住多看身邊的草叢和樹梢一眼。</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>43</b><span>臺灣親子走讀點</span></div>
+      <div class="fact"><b>6</b><span>海外國家與雨林</span></div>
+      <div class="fact"><b>248</b><span>全彩頁數</span></div>
+    </div>
+    <dl class="spec">
+      <dt>作者</dt><dd>黃仕傑（熱血阿傑）</dd>
+      <dt>出版</dt><dd>散冊出版｜2026 年 11 月 26 日上市</dd>
+      <dt>規格</dt><dd>17 x 23 cm｜平裝｜全彩 248 頁</dd>
+      <dt>ISBN</dt><dd>978-626-93282-2-2</dd>
+      <dt>定價</dt><dd>新臺幣 600 元</dd>
+    </dl>
+  </div>
+  <div>
+    <img class="book-img" src="img/cover_band.jpg" alt="《熱血阿傑的自然生態日記簿》書封（含書腰）">
+    <div class="feat" style="margin-top:30px">
+      <div><h3>在日常建立友善觀察</h3><p>不鼓勵採集與帶走，從觀察方法和旅行心態出發，先從身邊的公園、步道開始。</p></div>
+      <div><h3>不只辨認物種，更懂生態關係</h3><p>從演化、棲地到人類活動，說明一隻昆蟲、一片森林如何和整個環境互相牽動。</p></div>
+      <div><h3>第一線探險，讓科普有現場感</h3><p>夜間觀察、追蹤足跡、雨林迷途與在地交流，知識有了節奏，也有情感。</p></div>
+      <div><h3>交通、門票、走讀焦點一次查齊</h3><p>每個臺灣走讀點都附上交通建議、是否需要購票和不可錯過的生態觀察。</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="blk alt" id="gift"><div class="wrap">
+  <div class="gift-head">
+    <div>
+      <p class="kicker">首刷限定贈品</p>
+      <span class="gift-tag">首刷限定加贈別冊</span>
+      <h2 style="margin-top:12px">《2027 我的自然觀察誌》</h2>
+      <p class="gift-spec">A5（14.8 × 21 cm）｜全彩 32 頁｜附 2027 年曆</p>
+      <p class="gift-q">這個週末要去哪裡玩？翻開這本小冊子就有答案！</p>
+      <p>搭配阿傑親攝照片、臺灣走讀去處和書中對照頁碼，翻開就知道這個月可以去哪裡走走！每個月份，傑哥都幫你挑好一位當月主角，照著建議出門走走，在遠方的也列入夢想清單吧！</p>
+      <p>把你看到的、拍到的、美好的紀錄都收進月曆裡，蓋個紀念章，一年過完，這就是專屬於你和家人朋友，獨一無二的真實自然圖鑑！</p>
+    </div>
+    <img class="gift-cover" src="img/alm_cover.jpg" alt="別冊《2027 我的自然觀察誌》封面">
+  </div>
+
+  <div class="pages" id="pages" tabindex="0" aria-label="別冊內頁預覽，可左右滑動">
+    <figure class="spread"><img src="img/alm_jan.png" alt="一月跨頁：臺北樹蛙與一月月曆"><figcaption><b>每月一個跨頁｜一月</b>　左頁是當月主角臺北樹蛙、富陽公園去處和書中頁碼；右頁是月曆、集章區和紀錄欄。</figcaption></figure>
+    <figure class="spread"><img src="img/alm_may.png" alt="五月跨頁：猴麵包樹與五月月曆"><figcaption><b>紙上旅行月｜五月</b>　遠方的主角猴麵包樹，也告訴你臺灣哪裡看得到它。</figcaption></figure>
+    <figure><img src="img/alm_p2.jpg" alt="別冊第二頁：怎麼用這本觀察誌"><figcaption><b>怎麼用這本觀察誌</b>　集章方式和傑哥行動章說明。</figcaption></figure>
+    <figure><img src="img/alm_p3.jpg" alt="別冊第三頁：傑哥的話與自然觀察小約定"><figcaption><b>傑哥的話＋自然觀察小約定</b>　從抓虛擬的寶，到生活中的真實自然觀察。</figcaption></figure>
+    <figure><img src="img/alm_p30.jpg" alt="別冊第三十頁：意外的相遇"><figcaption><b>意外的相遇</b>　遇到叫不出名字的昆蟲，掃 QR Code 到社團問傑哥。</figcaption></figure>
+    <figure><img src="img/alm_p31.jpg" alt="別冊第三十一頁：我們的 2027 自然觀察全紀錄"><figcaption><b>年度回顧</b>　我們的 2027 自然觀察全紀錄。</figcaption></figure>
+  </div>
+  <div class="pager"><button type="button" id="pgPrev" aria-label="上一頁">‹</button><button type="button" id="pgNext" aria-label="下一頁">›</button></div>
+
+  <div class="howto">
+    <div><h3>翻開這個月</h3><p>看看傑哥挑的當月主角、建議去處，還有書中哪幾頁可以先讀。</p></div>
+    <div><h3>出門找找看</h3><p>照著「找找看」的小任務出發。遠方的物種，就先寫進夢想清單。</p></div>
+    <div><h3>收進月曆頁</h3><p>蓋紀念章、貼門票、拓印一片落葉，寫下日期、地點和最驚喜的一刻。</p></div>
+    <div><h3>遇到野生傑哥</h3><p>傑哥身上帶著特別設計的「傑哥行動章」，遇到他記得請他蓋章或簽名。</p></div>
+    <div><h3>不知道牠是誰</h3><p>拍下照片，到傑哥成立的昆蟲社團提問，大家一起幫你認。</p></div>
+    <div><h3>一年過完翻開</h3><p>十二個月的足跡和印記，就是全家獨一無二的真實自然圖鑑。</p></div>
+  </div>
+  <div class="promise">
+    <h3>別冊裡的自然觀察小約定</h3>
+    <ol>
+      <li>先蹲下來，用眼睛看，不急著伸手。</li>
+      <li>大自然的一切，只看、只拍，不抓也不帶走。</li>
+      <li>夜觀時使用手電筒，避免開最強光，不直接照射。</li>
+      <li>輪流看、輕聲說，把最好的位置讓給小一點的朋友。</li>
+      <li>遇到蛇、蜂和不認識的生物，一定保持距離避免接觸。</li>
+    </ol>
+  </div>
+</div></section>
+
+<section class="blk" id="author"><div class="wrap author">
+  <figure class="polaroid" style="margin:0"><img src="img/ajie_th.jpg" alt="熱血阿傑和團員在林道上觀察"><span>帶隊觀察中的阿傑</span></figure>
+  <div>
+    <p class="kicker">作者簡介</p>
+    <h2>熱血阿傑　黃仕傑</h2>
+    <ul class="creds">
+      <li>三立金鐘實境節目《上山下海過一夜》主持人</li>
+      <li>科普作家、生態攝影工作者</li>
+      <li>Canon 合作攝影師</li>
+    </ul>
+    <p>節目主持人、科普作家、生態攝影工作者，也是親自規劃與帶領生態旅行的自然觀察者。</p>
+    <p>老台北人，卻總是往森林深處走。探索足跡遍及東南亞、非洲、澳洲與中南美洲，曾登上海拔 5,895 公尺的非洲最高峰吉利馬札羅山，從海底到高山，用鏡頭與文字記錄不同環境中的生命樣貌。著有《甲蟲日記簿》、《鍬形蟲日記簿》、《鹿角蕨日記簿》等科普書籍。他寫的〈馬達加斯加，出發！〉收錄於康軒版國語六年級下冊第一課。</p>
+    <p>對阿傑來說，生態旅行的精彩，在於是否真正看懂眼前的自然。他希望讓更多人從「聽說過」走向「親眼看見」，再從好奇走向理解。</p>
+    <div class="social">
+      <a href="https://www.facebook.com/Huang0526" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/shijak0526" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@shijak0526" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="blk alt" id="buy"><div class="wrap">
+  <p class="kicker">購買通路</p>
+  <h2>首刷附別冊，數量有限</h2>
+  <p class="lead">以下通路的首刷書都隨書附贈《2027 我的自然觀察誌》，送完為止。</p>
+  <div class="shops" id="shops"></div>
+  <p class="buy-note">首刷售完後的版本不再附贈別冊。</p>
+</div></section>
+
+<section class="blk" id="recommend"><div class="wrap">
+  <p class="kicker">開箱推薦</p>
+  <h2>好朋友們先翻開了</h2>
+  <div class="recs">
+    <article class="rec"><div class="who"><div class="face">照片</div><div><b>推薦人姓名</b><span>職稱／身分</span></div></div><p>（推薦文字待補，約 30–50 字）</p></article>
+    <article class="rec"><div class="who"><div class="face">照片</div><div><b>推薦人姓名</b><span>職稱／身分</span></div></div><p>（推薦文字待補，約 30–50 字）</p></article>
+    <article class="rec"><div class="who"><div class="face">照片</div><div><b>推薦人姓名</b><span>職稱／身分</span></div></div><p>（推薦文字待補，約 30–50 字）</p></article>
+  </div>
+</div></section>
+
+<section class="blk alt" id="events"><div class="wrap">
+  <p class="kicker">實體活動｜冬日熱血親子遊</p>
+  <h2>寒假第一個週末，跟阿傑出門</h2>
+  <div class="events">
+    <article class="ev">
+      <div class="ev-img cut"><img src="img/frog.jpg" alt="臺北樹蛙"><div class="ev-date"><b>1/23</b><span>2027（六）</span></div></div>
+      <div class="ev-body">
+        <p class="ev-type">親子夜觀｜限額 20 人</p>
+        <h3>富陽夜行偵探團｜熱血阿傑帶你夜訪富陽生態公園</h3>
+        <p>太陽下山，森林才正要換班。傑哥親自帶隊，從黃昏走進天黑：在福州山看臺北盆地一盞盞亮起燈火，再打著手電筒鑽進步道，循著聲音找大赤鼯鼠、冬季限定的臺北樹蛙，還有藏在樹皮和草叢裡的夜行昆蟲與蜘蛛。</p>
+        <p>大人和孩子組成偵探小隊，一起蹲下來、一起屏住呼吸、一起發出「找到了！」的歡呼。這一晚的發現，會是全家人共同的秘密。</p>
+        <dl><dt>時間</dt><dd>17:30–19:00</dd><dt>地點</dt><dd>富陽自然生態公園（臺北市大安區）</dd><dt>對象</dt><dd>親子同行，孩子需滿 6 歲</dd></dl>
+        <div class="row ev-cta"><a class="btn solid" data-reg="fuyang" href="#" target="_blank" rel="noopener">立刻報名</a></div>
+      </div>
+    </article>
+    <article class="ev">
+      <div class="ev-img"><img src="img/family.jpg" alt="大人牽著孩子走在森林步道上"><div class="ev-date"><b>1/24</b><span>2027（日）</span></div></div>
+      <div class="ev-body">
+        <p class="ev-type">新書分享會｜大朋友小朋友都歡迎</p>
+        <h3>熱血阿傑新書分享會｜一本書，牽起一家人走進森林</h3>
+        <p>阿傑寫這本書，是想把多年來在山林裡累積的驚喜，交到每個家庭手上。比起記住多少物種的名字，他更在意大人和孩子能不能一起出門、一起好奇、一起被一隻小小的生命感動。</p>
+        <p>這個下午，阿傑會分享他如何陪孩子成為小小探險家、出門前怎麼準備、在野外遇到困難時怎麼化挫折為樂趣，還有書裡沒寫完的雨林故事。歡迎大朋友小朋友一起來聊聊、一起提問。</p>
+        <dl><dt>時間</dt><dd>14:30–16:00</dd><dt>地點</dt><dd>HME 登峰百岳（臺北市內湖區）</dd><dt>入場</dt><dd>憑書入場，現場開放簽書及提問互動</dd></dl>
+        <div class="row ev-cta"><a class="btn solid" data-reg="talk" href="#" target="_blank" rel="noopener">立刻報名</a></div>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section class="blk" id="excerpt"><div class="wrap">
+  <p class="kicker">書摘搶先看</p>
+  <h2>三段路，三種遇見</h2>
+  <div class="exs">
+    <article class="ex">
+      <div class="ex-img cut"><img src="img/frog.jpg" alt="臺北樹蛙"><p class="label"><b>臺北樹蛙</b>富陽自然生態公園｜書中 p.16–19</p></div>
+      <div><p class="place">臺灣北部｜臺北市大安區</p><h3>捷運站旁的森林，是阿傑的生態啟蒙地</h3>
+      <p>對許多人來說，富陽只是臺北市區的一抹綠意；對阿傑而言，這裡是他的生態啟蒙地。小時候住在捷運麟光站附近，放學後他總往當年的亂葬崗、今天的福州山跑，那裡少了人類打擾，臺灣欒樹上爬滿扁鍬形蟲。當年的軍營，如今成了林相完好的富陽自然生態公園：盛夏的烏桕樹上找得到渡邊氏長吻白蠟蟬，入夜循著叫聲能看見大赤鼯鼠滑翔，也是觀察保育類臺北樹蛙的好地方。</p>
+      <p class="pg">〈從富陽到福州山〉書中 p.16–21</p></div>
+    </article>
+    <article class="ex">
+      <div class="ex-img"><img src="img/rafflesia.jpg" alt="盛開的大王花"><p class="label"><b>大王花</b>婆羅洲神山低海拔研究站｜書中 p.180–189</p></div>
+      <div><p class="place">馬來西亞｜婆羅洲（東馬）</p><h3>一朵在心裡埋了四十年的花</h3>
+      <p>國小四年級，阿傑在一本百科全書裡讀到：東南亞雨林有種沒有根、莖、葉的植物，會開出血紅色的巨大花朵，散發腐肉惡臭。這顆「食人花」的種子，在他心裡埋了四十多年。後來他在神山低海拔研究站一次次遇見大王花：它全寄生在崖爬藤裡，花苞要長十個月到兩年，像一顆「黑高麗菜」，綻放後的花期卻十分短暫。阿傑還帶著熱顯像儀實測，發現它真的會微微「加溫」，把氣味送得更遠。</p>
+      <p class="pg">〈婆羅洲大兜蟲、大王花〉書中 p.180–189</p></div>
+    </article>
+    <article class="ex">
+      <div class="ex-img"><img src="img/indri.jpg" alt="大狐猴在樹間跳躍"><p class="label"><b>大狐猴</b>安達西貝－曼塔迪亞國家公園｜書中 p.212–213</p></div>
+      <div><p class="place">非洲｜馬達加斯加</p><h3>跨出亞洲的第一站，聽見森林在唱歌</h3>
+      <p>朋友一句「你怎麼好像都在亞洲？」，讓阿傑把跨出亞洲的第一站選在馬達加斯加。進入拉努馬法納國家公園，要另外聘請由村民轉型的生態導覽，三小時只要台幣五百元。嚮導指著一片垂掛的枯葉，湊近才看見撒旦葉尾守宮的眼睛。到了安達西貝，兩隻大狐猴仰頭唱和，阿傑悄悄放低相機改用手機錄音，錄著錄著，眼淚就止不住地流了下來。</p>
+      <p class="pg">〈葉尾守宮、大狐猴、猴麵包樹、長頸捲葉象鼻蟲〉書中 p.206–217</p></div>
+    </article>
+  </div>
+</div></section>
+
+<section class="blk alt" id="contents"><div class="wrap">
+  <p class="kicker">書籍目錄</p>
+  <h2>43 個臺灣走讀點＋6 國雨林</h2>
+  <div class="toc-front"><span>前言　我如何讓孩子自然成為探險家！<b>p.5</b></span></div>
+  <div class="toc-tw" id="tocTw"></div>
+  <div class="toc-abroad" id="tocAb"></div>
+  <div class="toc-front" style="margin-top:18px"><span>參考資料<b>p.246</b></span><span>後記與致謝<b>p.247</b></span></div>
+</div></section>
+
+<section class="blk" id="preface"><div class="wrap">
+  <div class="pf-hero">
+    <p class="kicker">作者序｜前言</p>
+    <h2>我如何讓孩子自然成為探險家！</h2>
+    <p>爸媽如何引導孩子，在山林中發掘無限潛能？</p>
+    <p class="by">文｜熱血阿傑　黃仕傑</p>
+  </div>
+  <nav class="pf-map" aria-label="序文段落">
+    <a href="#pf-1"><span>一</span>孩子天生就是觀察家</a>
+    <a href="#pf-2"><span>二</span>爸媽的陪伴與引導</a>
+    <a href="#pf-3"><span>三</span>打造你的自然生態之旅</a>
+    <a href="#pf-4"><span>四</span>從零開始，隨手記錄</a>
+  </nav>
+  <div class="pf-body">
+<section class="pf-part" id="pf-1"><p class="pf-partlabel"><span>一</span>孩子天生就是觀察家</p>
+<h3 class="pf-h">帶孩子探索的黃金期是何時？</h3>
+<p>現今的我，經常帶領親子自然觀察課程，足跡遍及台灣郊山、深山步道，甚至延伸至世界各地的熱帶雨林。我發現，小學階段的孩子對世界充滿好奇，不僅問題與想法繁多，執行力更是驚人。</p>
+<p>我的兒子剛滿七歲時，也正處於這個學習力最旺盛的黃金期。我們常一同上山下海或在庭院觀察生態，他也在耳濡目染下喜歡「拈花惹草」與野外尋蟲。</p>
+<p>有時，兩人會蹲在草叢中屏息等待，壓低音量交頭接耳。這看似溫馨的時光，對話過程卻常讓我絞盡腦汁⸺因為要將抽象的生態知識，轉化為孩子能理解的語言，確實需要花費一番心思。</p>
+<h3 class="pf-h">觀察力，讓孩子突破童年壓抑</h3>
+<p>孩子天生具備敏銳的觀察力，總能發現大人忽略的細微事物；然而，這些珍貴的天賦在我小時候卻常被長輩視為沒用的玩物。</p>
+<p>當時家長只著眼於紙上成績，當我想學繪畫與手作時，長輩卻安排我學樂器以便導師監督功課，對自然與昆蟲的熱情更被冷漠否定。</p>
+<p>當好奇心長期遭到壓抑，取而代之的往往是自暴自棄。我曾陷入「反正努力也沒用」的心態，成績一落千丈，甚至在讀高職時因課業與品德問題遭到退學。</p>
+<p>所幸歷經社會歷練與退伍後的沉澱，我在精品業務工作中找到歸屬感，隨後更因緣際會重新接觸昆蟲生態、深入雨林探索，並出版書籍與繪製插畫。這時我才驚覺，這正是我童年最渴望做的事。</p>
+<p>雖然命運讓步伐繞了一大圈，但這些歷練讓我更加珍惜現在，能帶領有興趣的孩子透過觀察大自然來啟發思考，已成為我人生最大的盼望。</p>
+<h3 class="pf-h">大自然能培養孩子的專注力</h3>
+<p>記得有一次帶領親子團進行生態觀察，清晨的森林裡充滿豐富的聲響。我們圍坐在石階上，將耳邊聽到的聲音逐一用紙筆記錄，並討論聲音的來源與意義。從清脆鳥鳴到潺潺水流，最後我們在草叢中找到了摩擦雙翅發聲的螽斯。</p>
+<p>每位家長與孩子都無比專注地聆聽與記錄。此時的森林就像一座宏偉的國家劇院，大自然是總指揮，林中萬物則是各具特色的演奏者。只要走進這座劇院，隨時都能聽到此起彼落的自然樂章。</p>
+<blockquote class="pf-pull">此時的森林就像一座宏偉的國家劇院，大自然是總指揮，林中萬物則是各具特色的演奏者。</blockquote>
+<p>我特別喜歡帶著大家尋找「聲音中的聲音」。正因為大自然聲響交織疊加，更需要極度專注才能從紛雜背景中指認細微動靜。孩子們天馬行空的聯想，不僅能鍛鍊聽力與專注力，更是培養邏輯分析能力的絕佳過程。</p>
+<h3 class="pf-h">善用自然素材啟發感官與熱情</h3>
+<p>自然界處處是驚喜，蟲鳴鳥叫、溪水奔流、落葉輕響都有著獨一無二的頻率，是賦予我們的最佳學習素材。孩子的聽力往往比大人敏銳，常能捕捉到微小聲響，我總是陪著他們循聲探源並給予適當引導。</p>
+<p>有時我也會收集乾燥落葉，讓孩子透過捏碎或敲擊體驗聲音多樣性，自然而然地愛上大自然。那場活動結束後，一位家長特地向我道謝，感嘆平常缺乏耐心、讓學校老師頭痛的兒子，今天居然能全神貫注地在交錯聲響中找出隱藏聲音，彷彿找到了真正熱愛的方向。</p>
+<p>看著家長眼中滿溢的喜悅與陪伴孩子走向戶外的決心，我感到無比欣慰。如果家長願意去理解並支持孩子的興趣，讓大自然成為陪伴成長的養分，那麼這個孩子將會是世界上最幸福的人。</p>
+</section>
+<section class="pf-part" id="pf-2"><p class="pf-partlabel"><span>二</span>爸媽的陪伴與引導</p>
+<h3 class="pf-h">爸媽，避免落入「代勞」盲點</h3>
+<p>許多家長帶孩子進行自然觀察時，經常無意間落入「幫孩子找、幫孩子學」的盲點。看見昆蟲時的直覺反應往往是直接指給孩子看，甚至動手抓來遞過去。這種看似尋常的舉動，其實悄悄剝奪了孩子尋找與親自發現的喜悅。</p>
+<p>讓孩子獨立尋找觀察對象，本身就是極佳的學習方式。面對繁茂的枝葉，孩子須透過眼力比對葉片的形狀、顏色與大小，在腦海中排除純植物特徵；接著尋找昆蟲線索，例如六隻腳的輪廓或葉片食痕，最終精準定位目標。</p>
+<p class="pf-tip">你可以巧妙引導與適時提示，化挫折為親子互動樂趣。</p>
+<p>若一時未果也無妨，可引導孩子重新審視。有了前次經驗，孩子能將已知資訊融入思考，大幅增進搜尋信心。家長亦可適時給予如顏色、形狀等關鍵提示，不僅能加深物種特徵記憶，更能增添親子互動樂趣。</p>
+<h3 class="pf-h">爸媽怎樣傾聽與分享？</h3>
+<p>不少家長因擔心髒污或細菌，過度限制孩子接觸自然，甚至在孩子滿懷喜悅分享新發現時，嫌棄那是「沒用的東西」而不予理會。</p>
+<p>長此以往，不僅會讓孩子因缺乏正面回應而不再分享，更可能打擊他們的自信心，讓孩子誤以為自己的觀察與發現毫無價值。</p>
+<p>育兒態度中常見的現象，是許多人在室內外看到蟑螂時便會驚慌尖叫、四處逃竄。這種極端恐懼往往源自大人的示範或既定印象。</p>
+<p>事實上，蟑螂本身並非多可怕，只是氣味與外觀較不討喜；然而，家長高亢的驚慌反應會深深烙印在孩子心中，讓孩子在甚至還不懂得何謂蟑螂時，便學會了「看見就要驚恐逃跑」的反射動作。</p>
+<h3 class="pf-h">以平心靜氣的身教引導</h3>
+<p>餐敘時兒子意外抓著一隻美洲蟑螂開心地前來分享，嚇得在場眾人鴉雀無聲，屏息觀望。</p>
+<p>此時，身為家長的我選擇平心靜氣與兒子對話，溫和引導他安頓昆蟲並確實將手洗淨。這場突如其來的「現場震撼教育」，讓眾人深刻體會到：面對未知與恐懼時，大人的從容與身教，才是引導孩子學習的最佳典範。</p>
+<blockquote class="pf-pull">面對未知與恐懼時，大人的從容與身教，才是引導孩子學習的最佳典範。</blockquote>
+<h3 class="pf-h">不急著給答案，讓探索過程樂趣無窮</h3>
+<p>成長過程中，「尋找答案」是不可或缺的關鍵能力。</p>
+<p>然而，部分家長因擔心孩子落後，將生活起居與大小需求一手包辦，甚至代做功課。這種作法看似是愛，實則削弱了孩子的生活體驗與探索能力。想培養孩子的獨立性，首要之務便是學會適時放手，讓他們嘗試「自己來」。</p>
+<p>當孩子分享新發現時，應放下手邊工作專注陪伴，討論搜尋過程與內心感受，使觀察記憶更深刻。此外，在日常生活中適時進行隨機提問，引導孩子回想曾見過的動植物特徵，能有效鍛鍊其靈活的反應能力與思考邏輯。</p>
+<h3 class="pf-h">營造閱讀氛圍開啟知識大門</h3>
+<p>面對工作繁忙無法即時給予解答的情況，父母可以利用空閒時間陪孩子在家翻書，或是安排週末的書店巡禮。</p>
+<p>透過這些行動，能讓孩子自然習慣沉浸在濃厚的閱讀氛圍中，正如書本永遠是通往廣闊知識世界最棒的鑰匙。</p>
+<h3 class="pf-h">享受未知挑戰，親子攜手探索</h3>
+<p>面對孩子提出的艱深問題時，若遇到大人也不知解答的狀況，正是最佳的合作契機。此時可與孩子一起翻閱圖鑑、上網查詢或向專家請教。</p>
+<p>不急著直接給予現成答案，陪伴孩子完整經歷尋找與探索的歷程，不僅能讓求知充滿樂趣，更能助其在未來真正學會獨立思考與自立。</p>
+</section>
+<section class="pf-part" id="pf-3"><p class="pf-partlabel"><span>三</span>打造你的自然生態之旅</p>
+<h3 class="pf-h">鄰近綠地：輕鬆便利的半日遊</h3>
+<p>當假期想帶著家人外出走走，卻沒有預設的觀察目標且時間緊湊時，鄰近的公園或郊山步道便是絕佳選擇。這些地點不僅有專人定期維護、公共設施完善，能確保全家大小的出遊安全，園區內廣植的原生植物與園藝花卉，也經常吸引昆蟲與鳥類穿梭其中，非常適合安排一場輕鬆的半日輕旅行。</p>
+<h3 class="pf-h">原始森林：深度探索</h3>
+<p>若想深入原始森林，欣賞高大樹木的附生植被及溪邊生態，出發前的功課不可少。這類景點多位於偏遠山區或國家森林遊樂區，出發前務必確認路況並留意氣象預報，切忌在天候不佳時勉強前往。若有特定的觀察目標，更需事先了解其出沒季節與棲地特性，以免興致勃勃前往卻空手而回。</p>
+<p>當行前各項資訊皆已備妥，即可依據路程遠近來安排一日遊或多日行程。由於部分景點路途遙遠、甚至需跨縣市移動，為了確保旅程舒適愜意，規劃時務必將車程時間彈性納入考量，避免行程過於緊湊而影響與家人同遊的品質。</p>
+<h3 class="pf-h">走入山林的食衣住行生存指南</h3>
+<div class="pf-four">
+<div class="pf-card"><p class="pf-cardk">食</p><h4>備妥充飢糧食與充足飲水</h4>
+<p>進行自然觀察時，首要考量便是飲食補給。由於戶外不像市區隨處可得便利商店，且長時間步行與肢體勞動會消耗大量體力，出發前務必妥善準備糧食：</p>
+<p class="pf-li"><b>輕旅行</b>　適合攜帶巧克力、餅乾、麵包等簡便乾糧。</p>
+<p class="pf-li"><b>一日遊</b>　若前往具備飲水機的國家森林遊樂區或生態農場，可考慮攜帶碗裝泡麵；若開車出行，亦可備簡易瓦斯爐燒水。</p>
+<p class="pf-li"><b>多日遊</b>　應提前制定「食材採買計畫表」，以「天數乘以三餐」精算份量，若有夜間觀察需求也需將宵夜納入規劃。</p>
+<p class="pf-li"><b>水分補充</b>　建議全家每人自備水壺，從家中煮沸開水出門，兼顧衛生與環保。切勿直接飲用野外山泉水，以免感染細菌或寄生蟲卵；若想品嚐，應帶回煮沸或在園區管理中心加滿。</p>
+</div>
+<div class="pf-card"><p class="pf-cardk">衣</p><h4>掌握機能穿搭與保護色</h4>
+<p>戶外環境常在短短數小時內面臨烈日、降溫或豪雨等不確定因素。為應對野趣並確保安全，穿著與裝備配置建議如下：</p>
+<p class="pf-li"><b>穿著提醒</b>　務必穿著「長袖衣褲」（防蚊蟲叮咬與刺植物刺傷），建議以舒適、低彩度，不反光的衣物為主。</p>
+<p class="pf-li"><b>防蜂避忌</b>　避免使用香水或濃郁香味保養品，不穿著黑色衣物，並跟蜂巢保持距離。</p>
+<p class="pf-li"><b>配件與鞋靴</b>　建議配戴具備遮頸布的帽子以防曬傷及蟲落頸部；鞋子應選擇舒適的運動鞋或多功能戶外鞋（尤以中高筒為佳以保護腳踝），絕對禁止穿著拖鞋。</p>
+</div>
+<div class="pf-card"><p class="pf-cardk">住</p><h4>兼顧舒適與安全</h4>
+<p>若行程規劃超過一天，尋找合適的住宿地點便成為重中之重。由於帶領家人同行時必須將舒適度與民生需求納入考量，傳統的飯店、旅館或民宿通常是多數人的首選；其中，許多優質民宿不僅提供三餐，還結合了生態導覽與手作體驗，對於沒時間詳細規劃行程的家庭而言非常便利。</p>
+<p>另一方面，深受孩子喜愛的「搭帳篷露營」能讓家人一同動手烹調、在星空下露宿，並在協力建構營地的過程中收穫無法取代的寶貴經驗。挑選營地時建議以設有完善衛浴設施的郊區公園或專門營地為主，部分業者亦提供帳篷租借，便於家庭進行輕裝體驗。然而，「安全」始終是最高原則，務必避免在河床、溪谷、懸崖或易落石區搭營，以防範突發的天候與地質風險。</p>
+</div>
+<div class="pf-card"><p class="pf-cardk">行</p><h4>大眾運輸與自駕彈性搭配</h4>
+<p>結合台灣便利的公共交通網絡、環保趨勢與油價考量，搭乘大眾運輸工具出遊是相當推薦的環保選擇。雖然有些人對搭乘公車或火車進行生態旅遊抱持觀望態度，但實際體驗證明，只要預先查詢車次並提早訂票，不僅實惠省力，還能在回程時好好放鬆休息，特別適合「單一地點」的深度旅遊。</p>
+<p>相對地，若是規劃「多個地點」的漫遊行程，騎車或開車則具備絕對優勢，不僅能隨車攜帶較多裝備與行李，還能享有極高的機動性，面對突發狀況或臨時變更景點時皆能隨時調整。不過，自行駕駛必須特別注意精神狀態，務必充足休息再上路，才能確保全家人的行車平安。</p>
+<p>若規劃過夜行程，不論是山莊、民宿或露營地，都必須提前預訂並詳細了解周邊設施與安全性；在交通方面，則應事先確認沿途路況、車況以及加油站位置，讓整個生態旅程在安全無虞的基礎上順利展開。</p>
+</div>
+</div>
+<h3 class="pf-h">觀察裝備清單</h3>
+<p>在野外探索時，適當的工具不僅能讓觀察更加深入，更能增添許多趣味。以下是我常帶在身上的「秘密武器」：</p>
+<div class="pf-gear">
+<div class="pf-gi"><h5>紙與筆</h5><p>到了戶外，我常會帶上圖畫紙與畫筆，和孩子一起天馬行空地創作。無論是描繪風景、昆蟲、植物，還是純粹的抽象線條都無所謂，重點是給孩子自由揮灑的空間。這時我們可以適時引導：「你畫的是什麼呢？」、「這個顏色好可愛喔！」，聆聽孩子的想法並給予讚美與鼓勵。</p></div>
+<div class="pf-gi"><h5>數位相機與智慧型手機</h5><p>這是戶外觀察時不可或缺的利器！除了能記錄親子互動與旅遊點滴，遇到驚喜發現的物種時更能即時拍下。除了靜態攝影，善用錄影功能來捕捉動物的動態行為，日後回顧時更能將精彩瞬間真實重現。</p></div>
+<div class="pf-gi"><h5>後背包</h5><p>在野外觀察時常需要「手腳並用」，如果手上還提著外套、水壺會非常不便。後背包是我長年在野外活動的標準配備，只要將乾糧、衣物、水壺與雜物統統交給它，就能釋放雙手，讓行動更加靈活。</p></div>
+<div class="pf-gi"><h5>望遠鏡</h5><p>觀星、賞鳥、觀察蝴蝶或高處的植物時，單靠肉眼能看到的範圍相當有限。許多物種活動於高大樹冠層或遠處，就算發現了也難以看清細節。這時若有望遠鏡輔助，就能將遠處的景象拉近，那種放大細節的視覺震撼，更能大大激發孩子的探索興趣。</p></div>
+<div class="pf-gi"><h5>放大鏡</h5><p>微小的花朵構造或小昆蟲非常精緻，但肉眼觀察不易。想要進一步觀察構造時，放大鏡就能派上用場。透過凸透鏡的放大效果，能讓微小物體的細節加倍清晰，使微觀世界不再遙不可及。</p></div>
+<div class="pf-gi"><h5>手電筒</h5><p>常有人問我：「手電筒不是夜間觀察才需要的嗎？」其實，手電筒是我白天也會隨身攜帶的秘密武器！白天雖然光線充足，但在密林樹蔭下、樹洞裡或岩壁縫隙中，光線往往不足。這時只要適時補光，就能看清躲藏其中的物種，這也是我常能找到特殊生物的訣竅所在。</p></div>
+<div class="pf-gi"><h5>雨具</h5><p>只要出門，我一定會在背包底層備著雨傘或輕便雨衣。山區或戶外的天氣難以精準預測，萬一遇到突如其來的陣雨，沒帶雨具而被淋成落湯雞，甚至因此感冒受涼，可就得不償失了。此外，若山區氣溫驟降，趕緊穿上雨衣也能起到不錯的防風禦寒效果。</p></div>
+<div class="pf-gi"><h5>其他輔助小工具</h5><p>因應不同地點與觀察物種的需求，也可以彈性準備：昆蟲觀察網、塑膠空瓶、黑色奇異筆、密封袋、指南針、溫濕度計、棉布手套、備用長袖衣物、小捲尺、鑷子（夾子）、採集小網、小水桶等。這些小物都能幫助我們在探索自然的過程中收集更多資訊，增添無窮樂趣。</p></div>
+</div>
+</section>
+<section class="pf-part" id="pf-4"><p class="pf-partlabel"><span>四</span>從零開始，隨手記錄</p>
+<h3 class="pf-h">從零開始的學習心路</h3>
+<p>初學自然觀察時，常因昆蟲躲藏、鳥類飛走或不認識植物而感到灰心。阿傑也必須老實說，早期因數位攝影尚未普及、微距相機昂貴且網路資源匱乏，只能靠著翻閱生態書籍、四處查資料以及向專家請教，才逐漸累積出對野生動植物的基礎知識。這證明了每位專家都是從不懂開始摸索，只要有心就能跨越門檻。</p>
+<h3 class="pf-h">隨手記錄：踏出探索第一步</h3>
+<p>相較於過去，現今的環境便利許多。出門時只要備妥相機或智慧型手機，把看到的蟲、魚、鳥、獸、植物通通拍照留存，或透過圖文寫下觀察心得。務必先留下具體的影像與文字紀錄，才能以此為依據，開啟後續的查證與探索之旅。</p>
+<h3 class="pf-h">動態觀察技巧</h3>
+<p>戶外記錄時會碰到「靜止」的植物與會「動」的動物。針對好動的蟲魚鳥獸，阿傑來提供一套近距離拍攝心法：當發現目標時全體保持靜止，先在原位拍下全景；接著壓低身形、緩慢前進，每跨出一步就拍幾張，拉近距離後再捕捉特寫。這種溫和漸進的方式能讓動物習慣人類的存在，大幅提升拍攝成功率。</p>
+<p>拍攝記錄後，便能善用網路豐富的生態社團與討論區進行比對查詢，也能搭配圖鑑書籍與家人一同翻閱。帶著孩子邊查資料邊分享觀察時的點滴與驚喜，不僅能解開對大自然的疑惑，更創造了無可取代的溫馨親子時光。</p>
+</section>
+  </div>
+</div></section>
+
+<section class="blk alt" id="more"><div class="wrap">
+  <p class="kicker">延伸閱讀</p>
+  <h2>讀完書，用耳朵繼續走</h2>
+  <div class="pod">
+    <img class="pod-cover" src="img/podcast.jpg" alt="Podcast《熱血阿傑的自然生態日記簿》節目封面">
+    <div>
+      <h3>熱血阿傑的自然生態日記簿</h3>
+      <p>阿傑每週分享臺灣與世界的自然生態，從海底到高山，從身邊的昆蟲聊到遠方的雨林。想先聽聽馬達加斯加的故事，可以從〈EP96｜當個友善、有生態意識的旅人！跟著阿傑到馬達加斯加〉開始。</p>
+      <div class="pills">
+        <a href="https://open.firstory.fm/user/shijaknature/episodes" target="_blank" rel="noopener">Firstory 收聽</a>
+        <a class="o" href="https://podcasts.apple.com/tw/podcast/%E7%86%B1%E8%A1%80%E9%98%BF%E5%82%91%E7%9A%84%E8%87%AA%E7%84%B6%E7%94%9F%E6%85%8B%E6%97%A5%E8%A8%98%E7%B0%BF/id1817317557" target="_blank" rel="noopener">Apple Podcasts</a>
+        <a class="o" href="https://podcast.kkbox.com/sg/channel/SopdYCmDBRBciMfybO" target="_blank" rel="noopener">KKBOX</a>
+      </div>
+    </div>
+  </div>
+  <div class="more-grid">
+    <div class="mg quiz"><a class="quiz-img" href="https://lingshu1019.github.io/looklook/" target="_blank" rel="noopener"><img src="img/quiz_look.jpg" alt="阿傑的自然觀察力大考驗"></a><h3>嘿！大自然能騙過你的眼睛嗎？</h3><p>樹枝會走路、枯葉會眨眼，森林裡到處都是偽裝高手。12 道看圖挑戰，考考你能不能一眼看穿！答完揭曉你的觀察力等級：是剛探出頭的鼠婦，還是能看穿偽裝的葉尾守宮？</p><div class="pills"><a href="https://lingshu1019.github.io/looklook/" target="_blank" rel="noopener">測測我的觀察力</a></div></div>
+    <div class="mg quiz"><a class="quiz-img" href="https://lingshu1019.github.io/forest-quiz/" target="_blank" rel="noopener"><img src="img/quiz_forest.jpg" alt="你是哪一種森林偽裝高手？本命偽裝生物測驗"></a><h3>如果你是森林裡的一種生物，你會是誰？</h3><p>開會時希望自己隱形？假日只想躺平不動如山？12 個生活小情境，測出你的本命偽裝生物：是一受驚就裝死的竹節蟲，還是一開口就讓人感動到落淚的大狐猴？測完還能知道去哪裡找到牠，順手傳給朋友，看看你們是不是最合拍的一對！</p><div class="pills"><a href="https://lingshu1019.github.io/forest-quiz/" target="_blank" rel="noopener">找出我的本命生物</a></div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>《熱血阿傑的自然生態日記簿》黃仕傑 著｜散冊出版 sandsbook</span><span>頁面照片皆取自本書中阿傑攝影，未經授權請勿轉載</span></div></footer>
+
+<script>
+/* 購買連結：拿到網址後填入 url 即可 */
+/* 活動報名連結：拿到網址後填入 */
+const REG={fuyang:'',talk:''};
+document.querySelectorAll('[data-reg]').forEach(a=>{const u=REG[a.dataset.reg];if(u){a.href=u}else{a.removeAttribute('target');a.href='#events';a.title='報名連結準備中'}});
+const SHOPS=[
+  {name:'博客來',url:'https://bookstw.link/9vuf37'},
+  {name:'誠品線上',url:'https://sandsbook.pse.is/9vuf9y'},
+  {name:'金石堂',url:'https://sandsbook.pse.is/9vufg8'},
+  {name:'讀冊生活 TAAZE',url:'https://sandsbook.pse.is/9vufj4'},
+  {name:'momo 購物網',url:'https://sandsbook.pse.is/9vufkx'}
+];
+const PHOTOS=[
+ ['frog','臺北樹蛙','富陽自然生態公園｜p.16'],['mantis','蘭花螳螂','婆羅洲少女營地｜p.174'],['owl','領角鴞','臺北植物園｜p.26'],['gecko','撒旦葉尾守宮','馬達加斯加｜p.206'],
+ ['swallowtail','寬尾鳳蝶','宜蘭太平山鳩之澤｜p.72'],['rafflesia','大王花','婆羅洲神山｜p.180'],['weevil','長頸捲葉象鼻蟲','馬達加斯加｜p.206'],['stick','津田氏大頭竹節蟲','屏東社頂公園｜p.100'],
+ ['loris','懶猴','泰國崗卡章國家公園｜p.142'],
+ ['baobab','猴麵包樹大道','馬達加斯加｜p.206'],['toad','枯葉角蟾','婆羅洲神山｜p.190'],['beetle','獨角仙','桃園羊稠坑森林步道｜p.22'],['mossgecko','苔蘚葉尾守宮（找得到嗎？）','馬達加斯加｜p.214'],
+ ['katydid','擬大螽斯','高雄壽山｜p.96'],['borneo','婆羅洲大兜蟲','婆羅洲神山｜p.180'],['sakura','山櫻花','臺中武陵農場｜p.67'],['indri','大狐猴飛躍','馬達加斯加｜p.212'],['butterfly','春天的鳳蝶','新北烏來內洞｜p.30']
+];
+(function(){
+  const mk=p=>`<figure class="ph"><img src="img/${p[0]}.jpg" alt="${p[1]}" loading="lazy"><figcaption>${p[1]}<small>${p[2]}</small></figcaption></figure>`;
+  const a=PHOTOS.slice(0,9),b=PHOTOS.slice(9);
+  const r1=document.getElementById('row1'),r2=document.getElementById('row2');
+  r1.innerHTML=a.map(mk).join('')+a.map(mk).join('');
+  r2.innerHTML=b.map(mk).join('')+b.map(mk).join('');
+  [...r1.children].slice(a.length).concat([...r2.children].slice(b.length)).forEach(f=>f.setAttribute('aria-hidden','true'));
+
+  const s=document.getElementById('shops');
+  s.innerHTML=SHOPS.map(x=>x.url?`<a class="shop" href="${x.url}" target="_blank" rel="noopener">${x.name}<small>前往購買 ›</small></a>`:`<span class="shop pending">${x.name}<small>連結準備中</small></span>`).join('');
+
+  const TW=[
+   ['臺灣北部',[['從富陽到福州山',16],['羊稠坑森林步道',22],['臺北植物園',26],['關渡自然公園',28],['內洞國家森林遊樂區',30],['熊空休閒農場',32],['八里渡船頭',34],['桃園虎頭山',36],['陽明山國家公園',37],['基隆情人湖',38],['新北市三芝',40],['尖石宇老',42],['觀霧國家森林遊樂區',44]]],
+   ['臺灣中部',[['大坑風景區',48],['溪頭自然教育園區',52],['谷關風景區',56],['苗栗鹿場部落',58],['八仙山國家森林遊樂區',60],['霧社',62],['大雪山國家森林遊樂區',64],['合歡山武嶺',66],['武陵農場',67],['南投惠蓀林場',68]]],
+   ['臺灣東部',[['太平山鳩之澤',72],['蘭嶼',76],['五峰旗瀑布',80],['雙連埤',82],['馬太鞍濕地',84],['福山植物園',85],['萬榮林道',86],['富源國家森林遊樂區',88],['太魯閣國家公園',89],['都蘭山',90],['知本國家森林遊樂區',91],['向陽國家森林遊樂區',92]]],
+   ['臺灣南部',[['壽山國家自然公園',96],['社頂公園',100],['鰲鼓濕地',104],['雙流國家森林遊樂區',106],['關子嶺',107],['阿里山草山村',108],['扇平森林生態科學園',110],['塔塔加',111]]]
+  ];
+  const AB=[
+   ['日本｜山梨縣',[['日本深山鍬形蟲',114]]],
+   ['泰國｜清邁、崗卡章國家公園',[['五角大兜蟲、苔蘚螽斯',124],['長尾闊嘴鳥、雙角犀鳥',136],['雨林蠍、大守宮、懶猴、葉猴',142],['提琴步行蟲、寄生花',150]]],
+   ['馬來西亞｜婆羅洲（東馬）',[['少女營地：兜型金龜、長臂猿',158],['馬來鵰鴞、帝王蟬、新芽螽斯',166],['蘭花螳螂、金花蛇',174],['神山低海拔研究站：婆羅洲大兜蟲、大王花',180],['枯葉角蟾、長角棘蛛、綠瘦蛇',190],['神山教我的事',196]]],
+   ['馬達加斯加｜拉努馬法納、安達西貝－曼塔迪亞',[['葉尾守宮、大狐猴、猴麵包樹、長頸捲葉象鼻蟲',206],['夢之巢、馬蘭巴度',218]]],
+   ['秘魯｜東喀馬',[['綠色角蟬、無螫蜂、南美長臂天牛、長戟大兜蟲',228]]],
+   ['澳大利亞｜萊明頓國家公園',[['沼林袋鼠、大塚雉、紅鸚鵡、巨沙螽',238]]]
+  ];
+  const col=(t,items,n)=>`<div class="toc-col"><h3>${t}${n?`<small>${items.length} 處</small>`:''}</h3><ol>${items.map(i=>`<li><span>${i[0]}</span><span>${i[1]}</span></li>`).join('')}</ol></div>`;
+  document.getElementById('tocTw').innerHTML=TW.map(r=>col(r[0],r[1],1)).join('');
+  document.getElementById('tocAb').innerHTML=AB.map(r=>col(r[0],r[1],0)).join('');
+
+  const pg=document.getElementById('pages');
+  const step=()=>Math.max(260,pg.clientWidth*0.8);
+  document.getElementById('pgPrev').onclick=()=>pg.scrollBy({left:-step(),behavior:'smooth'});
+  document.getElementById('pgNext').onclick=()=>pg.scrollBy({left:step(),behavior:'smooth'});
+})();
+</script>
+
+</body>
+</html>
