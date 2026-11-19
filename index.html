@@ -18,7 +18,9 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>body{margin:0}.pod-cover{width:180px;height:180px;object-fit:cover;border-radius:10px;box-shadow:0 8px 18px var(--shadow)}
 .ev-body p{margin:0}
-.ev-cta{margin-top:auto;padding-top:6px}
+.ev-cta{margin-top:auto;padding-top:6px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.ev-soon{font-size:13.5px;color:var(--ink-soft)}
+#recommend[hidden]+#events{border-top:1px solid var(--line)}
 .ev-cta .btn{padding:10px 26px}
 .mg.quiz{display:flex;flex-direction:column;gap:10px}
 .more-grid{align-items:start}
@@ -315,7 +317,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
     <li><a href="#intro">新書簡介</a></li>
     <li><a href="#gift">首刷別冊</a></li>
     <li><a href="#author">作者</a></li>
-    <li><a href="#recommend">開箱推薦</a></li>
+    <!-- 開箱推薦：有資料後把下一行的註解拿掉 -->
+    <!-- <li><a href="#recommend">開箱推薦</a></li> -->
     <li><a href="#events">實體活動</a></li>
     <li><a href="#excerpt">書摘</a></li>
     <li><a href="#contents">目錄</a></li>
@@ -445,6 +448,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <a href="https://www.facebook.com/Huang0526" target="_blank" rel="noopener">Facebook</a>
       <a href="https://www.instagram.com/shijak0526" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.youtube.com/@shijak0526" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://shijak0526.my.canva.site/" target="_blank" rel="noopener">合作邀約</a>
     </div>
     <div class="reviewer">
       <p class="rv-k">本書審定</p>
@@ -463,7 +467,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   <p class="buy-note">首刷售完後的版本不再附贈別冊。</p>
 </div></section>
 
-<section class="blk" id="recommend"><div class="wrap">
+<!-- 開箱推薦：有資料後，刪掉下一行的 hidden 就會顯示 -->
+<section class="blk" id="recommend" hidden><div class="wrap">
   <p class="kicker">開箱推薦</p>
   <h2>好朋友們先翻開了</h2>
   <div class="recs">
@@ -485,7 +490,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <p>太陽下山，森林才正要換班。傑哥親自帶隊，從黃昏走進天黑：在福州山看臺北盆地一盞盞亮起燈火，再打著手電筒鑽進步道，循著聲音找大赤鼯鼠、冬季限定的臺北樹蛙，還有藏在樹皮和草叢裡的夜行昆蟲與蜘蛛。</p>
         <p>大人和孩子組成偵探小隊，一起蹲下來、一起屏住呼吸、一起發出「找到了！」的歡呼。這一晚的發現，會是全家人共同的秘密。</p>
         <dl><dt>時間</dt><dd>17:30–19:00</dd><dt>地點</dt><dd>富陽自然生態公園（臺北市大安區）</dd><dt>對象</dt><dd>建議親子同行，一起來親近大自然</dd></dl>
-        <div class="row ev-cta"><a class="btn solid" data-reg="fuyang" href="#" target="_blank" rel="noopener">立刻報名</a></div>
+        <div class="row ev-cta"><a class="btn solid" data-reg="fuyang" href="#" target="_blank" rel="noopener">立刻報名</a><span class="ev-soon">預計於 12/7（一）開放報名</span></div>
       </div>
     </article>
     <article class="ev">
@@ -495,8 +500,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
         <h3>熱血阿傑新書分享會｜一本書，牽起一家人走進森林</h3>
         <p>阿傑寫這本書，是想把多年來在山林裡累積的驚喜，交到每個家庭手上。比起記住多少物種的名字，他更在意大人和孩子能不能一起出門、一起好奇、一起被一隻小小的生命感動。</p>
         <p>這個下午，阿傑會分享他如何陪孩子成為小小探險家、出門前怎麼準備、在野外遇到困難時怎麼化挫折為樂趣，還有書裡沒寫完的雨林故事。歡迎大朋友小朋友一起來聊聊、一起提問。</p>
-        <dl><dt>時間</dt><dd>14:30–16:00</dd><dt>地點</dt><dd>HME 登峰百岳（臺北市內湖區）</dd><dt>入場</dt><dd>憑書入場，現場開放簽書及提問互動</dd></dl>
-        <div class="row ev-cta"><a class="btn solid" data-reg="talk" href="#" target="_blank" rel="noopener">立刻報名</a></div>
+        <dl><dt>時間</dt><dd>14:30–16:00</dd><dt>地點</dt><dd>HME 百岳戶外裝備－台北旗艦館 三樓（臺北市內湖區新湖二路 8 號）</dd><dt>入場</dt><dd>憑書入場，現場開放簽書及提問互動</dd></dl>
+        <div class="row ev-cta"><a class="btn solid" data-reg="talk" href="#" target="_blank" rel="noopener">立刻報名</a><span class="ev-soon">預計於 12/7（一）開放報名</span></div>
       </div>
     </article>
   </div>
